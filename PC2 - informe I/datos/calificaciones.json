@@ -1,0 +1,49 @@
+{
+  "alumnado": [
+    {
+      "nombre": "Ana",
+      "notas": {
+        "matematicas": 7,
+        "lengua": 8,
+        "historia": 6,
+        "ciencias": 9
+      }
+    },
+    {
+      "nombre": "Luis",
+      "notas": {
+        "matematicas": 5,
+        "lengua": 6,
+        "historia": 7,
+        "ciencias": 6
+      }
+    },
+    {
+      "nombre": "María",
+      "notas": {
+        "matematicas": 9,
+        "lengua": 9,
+        "historia": 8,
+        "ciencias": 9
+      }
+    },
+    {
+      "nombre": "Carlos",
+      "notas": {
+        "matematicas": 6,
+        "lengua": 5,
+        "historia": 6,
+        "ciencias": 5
+      }
+    },
+    {
+      "nombre": "Lucía",
+      "notas": {
+        "matematicas": 8,
+        "lengua": 7,
+        "historia": 9,
+        "ciencias": 8
+      }
+    }
+  ]
+}

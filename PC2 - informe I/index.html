@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<style>
+  /*Posibilidad de crear estilos para la impresion*/
+  @media print {
+    body{
+      color:blue;
+      font-size: 20pt;
+    }
+
+    button{
+      display: none;
+    }
+    
+  }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe calificaciones</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/estilos.css" rel="stylesheet">
+
+</head>
+
+<body>
+<nav>
+<button id="generar-informe">Generar informe</button>
+<button id="guardar-pdf">Guardar como PDF</button>
+</nav>
+
+<section class="reporte">
+  <h1>Informe de calificaciones</h1>
+  <p class="obs" id="fecha"></p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Alumno</th>
+        <th>Matemáticas</th>
+        <th>Lengua</th>
+        <th>Historia</th>
+        <th>Ciencias</th>
+        <th>Promedio</th>
+      </tr>
+    </thead>
+    <tbody id="tabla"></tbody>
+  </table>
+
+  <footer class="estadisticas">
+    <aside class="caja">
+      <strong>Promedio por asignatura</strong>
+      <ul id="promediosAsignatura"></ul>
+    </aside>
+
+    <aside class="caja">
+      <strong>Observaciones</strong>
+      <p class="obs">
+        Informe generado automáticamente a partir de datos simulados usando JavaScript.
+      </p>
+    </aside>
+  </footer>
+</section>
+
+<script>
+  function imprimir(){
+    window.print();
+  }
+
+  document.getElementById('guardar-pdf').addEventListener('click', imprimir);
+
+</script>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
