@@ -82,6 +82,7 @@ function pintarInformeEnTemplate(informe, selector) {
   contenedor.innerHTML = "";
 
   const template = document.querySelector("#tpl-informe");
+  //.cloneNode -> clonamos el nodo
   const clone = template.content.cloneNode(true);
 
   clone.querySelector(".titulo").textContent =
@@ -129,4 +130,27 @@ async function mostrarInforme(anio, selector) {
   pintarInformeEnTemplate(informe, selector);
 }
 
+//En el segundo parámetro se utiliza css porque en la funcion pintarInformeTemplate
+//utilizamos querySelector
+mostrarInforme(2022, '#caja-1');
+mostrarInforme(2022, '#caja-2');
 
+
+function imprimirGraficoTarta(){
+  const config = {
+  type: 'pie',
+  data: data,
+  options: {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: 'top',
+      },
+      title: {
+        display: true,
+        text: 'Chart.js Pie Chart'
+      }
+    }
+  },
+};
+}
