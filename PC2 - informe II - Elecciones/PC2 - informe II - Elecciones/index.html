@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Informe elecciones municipales</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+<nav>
+  <button id="imprimir">Guardar como PDF</button>
+</nav>
+
+<!-- TEMPLATE -->
+<template id="tpl-informe">
+
+  <section class="reporte" >
+    <h1 class="titulo"></h1>
+    <p class="info fecha"></p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Partido</th>
+          <th>Siglas</th>
+          <th>Votos</th>
+          <th>Concejales</th>
+        </tr>
+      </thead>
+      <tbody class="tablaResultados"></tbody>
+    </table>
+
+    <div class="estadisticas">
+      <div class="caja">
+        <strong>Total de votos</strong>
+        <p class="totalVotos"></p>
+      </div>
+
+      <div class="caja">
+        <strong>Participación</strong>
+        <p class="participacion"></p>
+      </div>
+    </div>
+
+    <div class="caja">
+      <strong>Escribe aquí el título del gráfico que quieres mostrar</strong>
+      <div class="grafico">
+        <canvas class="graficoTarta"></canvas>
+      </div>
+    </div>
+  </section>
+
+</template>
+
+<!-- CONTENIDO -->
+<main>
+  <section id="caja-1"></section>
+  <section id="caja-2"></section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+:root {
+
+    /* Medidas */
+    --uni: clamp(18px, 1.2vw + 3px, 24px);
+    --uniW: 1vw;
+    --uniH: 1vh;
+
+    /* Colores */
+    --bg: #f6f7f8;
+    --primary: #dd221c;
+    --primary-dark: #0f3f42;
+    --accent: rgb(122, 176, 139);
+    --text: #243333;
+    --white: #ffffff;
+    --subrayado: rgba(221, 35, 28, 0.25);
+
+    /* Espaciados */
+    --space-xs: 0.5rem;
+    --space-s: 1rem;
+    --space-m: 2rem;
+    --space-l: 3rem;
+
+    /* Bordes */
+    --radius: 0.5rem;
+
+    /* Transición */
+    --transicion: all .2s ease;
+
+    /* Fuentes */
+    --fuente-pral: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --fuente-mono: 'Consolas', 'Courier New', Courier, monospace;
+
+}
+
+body,
+html {
+    overflow-x: hidden;
+}
+
+body {
+    font-family: var(--fuente-pral);font-size: var(--uni);
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    font-weight: 400;font-size:var(--uni)
+
+}
+
+nav{
+     padding: var(--space-m);display: flex; 
+     justify-content: space-evenly;
+}
+button{
+  padding: var(--space-xs) var(--space-s);
+  background: var(--primary);
+  color: var(--white);
+  border-radius: var(--radius);
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: var(--space-m);
+  transition: var(--transicion);
+}
+
+button:hover{
+  background: var(--primary-dark);
+}
+
+
+
+.reporte{
+  max-width: 900px;
+  margin-inline: auto;
+  background: var(--white);
+  padding: var(--space-m);
+  border-radius: calc(var(--radius) * 2);
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+
+
+
+.reporte h1{
+  font-size: calc(var(--uni) * 1.3);
+  color: var(--primary-dark);
+}
+
+.obs{
+  margin-top: var(--space-xs);
+  color: rgba(36, 51, 51, 0.7);
+  font-size: calc(var(--uni) * 0.85);
+}
+
+
+
+table{
+  width: 100%;
+  margin-top: var(--space-s);
+  font-size: calc(var(--uni) * 0.9);
+}
+
+th,
+td{
+  padding: var(--space-xs);
+  text-align: center;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+
+th{
+  background: var(--bg);
+  font-weight: 600;
+}
+
+tbody tr:hover{
+  background: var(--subrayado);
+}
+
+
+
+.estadisticas{
+  margin-top: var(--space-m);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-m);
+}
+
+
+
+.caja{
+  padding: var(--space-s);
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: var(--radius);
+  background: var(--white);
+}
+
+.caja strong{
+  color: var(--primary-dark);
+}
+ 
+.cajagrafico{
+  width:100%;margin:auto;
+}
+#grafico{
+  width:100%;margin:auto;
+}

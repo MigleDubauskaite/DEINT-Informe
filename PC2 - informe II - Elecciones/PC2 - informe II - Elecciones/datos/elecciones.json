@@ -1,0 +1,84 @@
+{
+  "municipio": "Villa del Río Claro",
+  "informe": {
+    "fecha_generacion": "2026-02-06"
+  },
+  "elecciones": [
+    {
+      "anio": 2022,
+      "fecha_eleccion": "2022-02-05",
+      "censo": 5200,
+      "participacion": 0.68,
+      "resultados": [
+        {
+          "partido": "Partido Vecinal",
+          "siglas": "PV",
+          "votos": 1450,
+          "concejales": 6
+        },
+        {
+          "partido": "Unión Progresista Local",
+          "siglas": "UPL",
+          "votos": 800,
+          "concejales": 3
+        },
+        {
+          "partido": "Movimiento Verde",
+          "siglas": "MV",
+          "votos": 820,
+          "concejales": 3
+        },
+        {
+          "partido": "Ciudadanía Activa",
+          "siglas": "CA",
+          "votos": 710,
+          "concejales": 3
+        },
+        {
+          "partido": "Alternativa Rural",
+          "siglas": "AR",
+          "votos": 350,
+          "concejales": 1
+        }
+      ]
+    },
+    {
+      "anio": 2026,
+      "fecha_eleccion": "2026-02-05",
+      "censo": 5400,
+      "participacion": 0.72,
+      "resultados": [
+        {
+          "partido": "Unión Progresista Local",
+          "siglas": "UPL",
+          "votos": 1680,
+          "concejales": 6
+        },
+        {
+          "partido": "Partido Vecinal",
+          "siglas": "PV",
+          "votos": 1100,
+          "concejales": 4
+        },
+        {
+          "partido": "Movimiento Verde",
+          "siglas": "MV",
+          "votos": 980,
+          "concejales": 4
+        },
+        {
+          "partido": "Ciudadanía Activa",
+          "siglas": "CA",
+          "votos": 740,
+          "concejales": 2
+        },
+        {
+          "partido": "Alternativa Rural",
+          "siglas": "AR",
+          "votos": 420,
+          "concejales": 1
+        }
+      ]
+    }
+  ]
+}

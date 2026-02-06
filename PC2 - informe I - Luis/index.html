@@ -1,19 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-<style>
-  /*Posibilidad de crear estilos para la impresion*/
-  @media print {
-    body {
-      color: blue;
-      font-size: 20pt;
-    }
-
-    button {
-      display: none;
-    }
-
-  }
-</style>
 
 <head>
   <meta charset="UTF-8">
@@ -26,8 +12,8 @@
 
 <body>
   <nav>
-    <button id="generar-informe">Generar informe</button>
-    <button id="guardar-pdf">Guardar como PDF</button>
+    <button onclick="generarInforme()">Generar informe</button>
+    <button onclick="imprimir()">Guardar como PDF</button>
   </nav>
 
   <section class="reporte">
@@ -60,41 +46,55 @@
           Informe generado automáticamente a partir de datos simulados usando JavaScript.
         </p>
       </aside>
-      <div class="cajagrafico">
-        <canvas id="grafico"></canvas>
-      </div>
+      <div class="cajagrafico"><canvas id="grafico"></canvas></div>
     </footer>
+
   </section>
 
-  <script>
-    function imprimir() {
-      window.print();
-    }
 
-    document.getElementById('guardar-pdf').addEventListener('click', imprimir);
-
-  </script>
 
   <script src="js/script.js"></script>
-
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-  <!-- https://www.chartjs.org/docs/latest/getting-started/ -->
   <script>
-    const lienzo = document.getElementById('grafico');
-    new Chart(lienzo, {
-      type: 'bar',
+    /* const ctx = document.getElementById("grafico");
+    
+    new Chart(ctx, {
+      type: "bar",
       data: {
-        labels: ['Matemáticas', 'Lengua', 'Historia', 'Ciencas'],
+        labels: ["Matemáticas", "Lengua", "Historia", "Ciencias"],
         datasets: [{
-          label: "Promedio de asignaturas",
-          data: [3.00, 10.00, 5.25, 8.20],
+          label: "Promedio por asignatura",
+          data: [7.2, 6.8, 7.5, 7.0]
+        }]
+      }
+    }); */
+
+    new Chart(document.getElementById("grafico"), {
+      type: "bar",
+      data: {
+        labels: ["Matemáticas", "Lengua", "Historia", "Ciencias"],
+        datasets: [{
+          label: "Promedio por asignatura",
+          data: [7.2, 6.8, 7.5, 7.0]
         }]
       },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: {
+            min: 0,
+            max: 10,
+            ticks: {
+              stepSize: 1
+            }
+          }
+        }
+      }
     });
+
   </script>
-
-
 </body>
 
 </html>
